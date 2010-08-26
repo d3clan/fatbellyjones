@@ -1,0 +1,322 @@
+/* Product Page - which are page specific and which are global? */
+
+.product_title{
+margin:5px 0 0 0;
+}
+
+.product_title_bold{
+font-size:1.4em;
+font-weight:bold;
+color:#666666;
+}
+
+.product_title a{
+font-size:1em;
+font-weight:normal;
+}
+.product_container{
+float:left;
+width:420px;
+height:175px;
+padding:20px 0 15px 0;
+}
+
+.product_container dl{
+float:left;
+margin:0;
+padding:0;
+width:400px;
+}
+
+.product_container dt{
+float:right;
+width:270px;
+padding:0;
+margin:0;
+line-height:1.2em;
+}
+
+.product_container dd{
+padding:0;
+margin:0;
+}
+
+.product_container dd.product_img_lg img{
+float:left;
+border:#cccccc;
+border-style:solid;
+border-width:1px;
+}
+
+.add_basket_button_lg a{
+display:block;
+width:140px;
+height:26px;
+background-image:url(images/add_basket_button_large.gif);
+background-repeat:no-repeat;
+padding-left:40px;
+padding-top:6px;
+font-size:10px;
+font-weight:bold;
+color:#CC0000;
+}
+
+.critic_quote{
+color:#999900;
+font-size:120%;
+}
+
+.two_col_one_header {
+clear:both;
+margin: 10px 10px 10px 10px;
+}
+
+.two_col_one_header h2 {
+text-align:left;
+color:#999999;
+padding:0 0 5px 0;
+border-bottom:1px solid #CCCCCC;
+}
+
+.col2_left{
+float:left;
+width:45%;
+margin-left:5px;
+padding-top:0px;
+}
+
+.col2_right{
+float:right;
+width:45%;
+padding-top:0px;
+}
+
+.col2_left li{
+margin:0 0 0 -13px;
+line-height:1.7em;
+}
+
+.col2_right li{
+margin:0 0 0 -13px;
+line-height:1.7em;
+}
+
+.col2_left span{
+width:45%;
+}
+
+.col2_left dl{
+float:left;
+margin:0;
+padding:0;
+width:210px;
+display:inline;
+}
+
+.col2_left a{
+padding:0;
+line-height:15px;
+}
+
+.col2_left dt{
+float:right;
+width:140px;
+padding:0;
+margin:0;
+line-height:1.2em;
+}
+
+.col2_left dd{
+padding:0;
+padding-right:1px;
+margin:0;
+}
+
+.col2_left dd.comp_thumb img{
+float:left;
+border:#cccccc;
+border-style:solid;
+border-width:1px;
+}
+
+.col2_right dl{
+float:left;
+margin:0;
+padding:0;
+width:210px;
+display:inline;
+}
+
+.col2_right a{
+padding:0;
+line-height:15px;
+}
+
+.col2_right dt{
+float:right;
+width:140px;
+padding:0;
+margin:0;
+line-height:1.2em;
+}
+
+.col2_right dd{
+padding:0;
+padding-right:1px;
+margin:0;
+}
+
+.col2_right dd.comp_thumb img{
+float:left;
+border:#cccccc;
+border-style:solid;
+border-width:1px;
+}
+
+.col2_right blockquote {
+float:left;
+width:175px;
+background-image:url(images/blockquoteleft.gif);
+background-repeat:no-repeat;
+background-position:left top;
+color:#999900;
+font-size:1.2em;
+line-height:19px;
+margin:0;
+}
+
+.old_price{
+text-decoration:line-through;
+color:#999999;
+}
+
+.new_price{
+color:#CC0000;
+}
+
+
+#recommend{
+clear:both;
+background-image:url(images/roddy_doyle_recommend.jpg);
+background-repeat:no-repeat;
+background-position:top;
+margin-left:10px;
+padding:0;
+height:165px;
+margin-top:20px;
+}
+
+
+#recommend p{
+width:220px;
+}
+
+#recommend h2 {
+color:#999999;
+padding:0 0 5px 0;
+border:none;
+}
+
+.recommend_button{
+position:relative;
+top:134px;
+left:22px;
+width:140px;
+height:20px;
+}
+
+blockquote {
+float:left;
+width:210px;
+background-image:url(images/blockquoteleft.gif);
+background-repeat:no-repeat;
+background-position:left top;
+color:#999900;
+font-size:1.3em;
+line-height:19px;
+margin:0;
+}
+
+blockquote span {
+padding: 0 28px;
+background-image:url(images/blockquoteright.gif);
+background-repeat:no-repeat;
+background-position:right bottom;
+}
+
+
+.competitions dl{
+float:left;
+margin: 5px 0px;
+padding:0;
+width:210px;
+display:inline;
+}
+
+.competitions a{
+background-image:url(images/link_bullet.gif);
+background-repeat:no-repeat;
+background-position:left;
+padding-left:11px;
+line-height:15px;
+}
+
+.competitions dt{
+float:right;
+width:136px;
+padding:0;
+margin:0;
+line-height:1.2em;
+}
+
+.competitions dd{
+padding:0;
+padding-right:1px;
+margin:0;
+}
+
+.competitions dd.comp_thumb img{
+float:left;
+border:#cccccc;
+border-style:solid;
+border-width:1px;
+}
+
+.your_read dl{
+float:left;
+margin: 5px 0px;
+padding:0;
+width:210px;
+display:inline;
+}
+
+.your_read a{
+font-weight:bold;
+line-height:15px;
+}
+
+.your_read span{
+font-size:85%;
+}
+
+.your_read dt{
+float:right;
+width:136px;
+padding:0;
+margin:0;
+margin-right:3px;
+line-height:1.2em;
+}
+
+.your_read dd{
+padding:0;
+padding-right:1px;
+margin:0;
+}
+
+.your_read dd.read_thumb img{
+float:left;
+border:#cccccc;
+border-style:solid;
+border-width:1px;
+}

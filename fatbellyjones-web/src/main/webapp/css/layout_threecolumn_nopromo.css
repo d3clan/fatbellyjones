@@ -1,0 +1,23 @@
+/* CSS for login page */
+@import url(standard_page.css);
+
+fieldset label {
+	display: block;
+	width: 160px;
+	text-align: right;
+	padding-right: 10px;
+	font-weight: bold;
+}
+
+/* WTF?!
+select {
+width:155px;
+}
+*/
+.rightcolbox {
+	clear: both;
+	float: left;
+	width: 133px;
+	margin: 0 5px 0 5px;
+	padding: 10px 0;
+}

@@ -1,0 +1,9 @@
+<emailtofriend>
+	<isbn>654654321321</isbn>
+	<from name="Pete Mitchell" address="maverick@yahoo.com" />
+	<recipients>
+		<recipient name="Hulk Hogan" address="george.nash@semantico.com" />
+		<recipient name="Peter Baxendale-Thomas" address="george.nash@semantico.com" />
+	</recipients>
+	<body>&lt;Message from Dennis&gt;</body>
+</emailtofriend>

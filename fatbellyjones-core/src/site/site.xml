@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<site>
+  <bannerLeft>
+    <name>Random House - Widget Core</name>
+    <src>images/ddc-logo.gif</src>
+    <href>http://steak.semantico.net/rh-ddc/</href>
+  </bannerLeft>
+  <bannerRight>
+    <src>images/semantico-logo.gif</src>
+  </bannerRight>
+  <body>
+    <links>
+      <item name="Random House DDC Home" href="http://steak.semantico.net/rh-ddc/"/>
+    </links>
+    ${reports}
+  </body>
+</site>
