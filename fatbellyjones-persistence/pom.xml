@@ -48,7 +48,7 @@
 	</dependencies>
 	
 	<properties>
-	  <hibernate.version>3.3.2.GA</hibernate.version>
+	  <hibernate.version>3.5.1-Final</hibernate.version>
 	</properties>
 	
 </project>

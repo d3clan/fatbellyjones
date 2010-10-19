@@ -44,10 +44,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.2</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.6</version>
 				<configuration>
 					<showSuccess>false</showSuccess>
 				</configuration>
@@ -55,6 +57,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.7</version>
 				<configuration>
 					<minmemory>128m</minmemory>
 					<maxmemory>512</maxmemory>
@@ -63,18 +66,22 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jxr-plugin</artifactId>
+				<version>2.2</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>2.5</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
+				<version>2.5</version>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>taglist-maven-plugin</artifactId>
+				<version>2.4</version>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -98,6 +105,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
 				<executions>
 					<execution>
 						<id>attach-sources</id>
@@ -136,6 +144,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
+				<version>2.0</version>
 				<configuration>
 					<tagbase>http://svn.declans.net:333/repos/fatbellyjones/trunk</tagbase>
 				</configuration>
@@ -170,7 +179,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.2</version>
+			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -195,12 +204,15 @@
 		<spring.version>3.0.3.RELEASE</spring.version>
 		<jsp.version>2.0</jsp.version>
 		<java.version>1.6</java.version>
+		<hibernate.version>3.5.5-Final</hibernate.version>
+		<cxf.version>2.2.3</cxf.version>
 	</properties>
+
+	
 
 	<modules>
 		<module>fatbellyjones-core</module>
 		<module>fatbellyjones-web</module>
-		<module>fatbellyjones-persistence</module>
 	</modules>
 
 	<repositories>
@@ -215,14 +227,18 @@
 			</snapshots>
 		</repository>
 		<repository>
-			<id>springsource-release</id>
+			<id>com.springsource.repository.bundles.release</id>
+			<name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>
 			<url>http://repository.springsource.com/maven/bundles/release</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.bundles.external</id>
+			<name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/external</url>
+		</repository>
+		<repository>
+			<id>central</id>
+			<url>http://www.ibiblio.org/maven2</url>
 		</repository>
 	</repositories>
 
