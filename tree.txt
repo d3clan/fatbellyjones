@@ -1,0 +1,191 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.viviquity:fatbellyjones-core:jar:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin is missing. @ 
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.viviquity:fatbellyjones-web:war:1.0.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin is missing. @ 
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Fat Belly Jones
+[INFO] Fat Belly Jones - Core
+[INFO] Fat Belly Jones - Web
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Fat Belly Jones 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.1:tree (default-cli) @ fatbellyjones ---
+[INFO] com.viviquity:fatbellyjones:pom:1.0.0-SNAPSHOT
+[INFO] +- easymock:easymock:jar:1.1:test
+[INFO] +- junit:junit:jar:4.7:test
+[INFO] +- org.springframework:spring-test:jar:3.0.3.RELEASE:test
+[INFO] +- org.springframework:spring-core:jar:3.0.3.RELEASE:compile
+[INFO] |  +- org.springframework:spring-asm:jar:3.0.3.RELEASE:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] \- log4j:log4j:jar:1.2.9:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Fat Belly Jones - Core 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[WARNING] While downloading servletapi:servletapi:2.4-20040521
+  This artifact has been relocated to javax.servlet:servlet-api:2.4-20040521.
+
+
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.1:tree (default-cli) @ fatbellyjones-core ---
+[INFO] com.viviquity:fatbellyjones-core:jar:1.0.0-SNAPSHOT
+[INFO] +- jdom:jdom:jar:1.0:compile
+[INFO] +- rome:rome:jar:0.9:compile
+[INFO] +- commons-httpclient:commons-httpclient:jar:20020423:compile
+[INFO] +- org.springframework:spring-orm:jar:3.0.3.RELEASE:compile
+[INFO] |  +- org.springframework:spring-beans:jar:3.0.3.RELEASE:compile
+[INFO] |  +- org.springframework:spring-jdbc:jar:3.0.3.RELEASE:compile
+[INFO] |  \- org.springframework:spring-tx:jar:3.0.3.RELEASE:compile
+[INFO] |     +- aopalliance:aopalliance:jar:1.0:compile
+[INFO] |     +- org.springframework:spring-aop:jar:3.0.3.RELEASE:compile
+[INFO] |     \- org.springframework:spring-context:jar:3.0.3.RELEASE:compile
+[INFO] |        \- org.springframework:spring-expression:jar:3.0.3.RELEASE:compile
+[INFO] +- org.springframework:spring-core:jar:3.0.3.RELEASE:compile
+[INFO] |  +- org.springframework:spring-asm:jar:3.0.3.RELEASE:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- com.google.code.facebookapi:facebook-java-api:jar:2.0.5:compile
+[INFO] |  +- com.google.code.facebookapi:facebook-java-api-schema:jar:2.0.5:compile
+[INFO] |  |  \- org.jvnet.jaxb2_commons:runtime:jar:0.4.1.3:compile
+[INFO] |  |     \- commons-lang:commons-lang:jar:2.2:compile
+[INFO] |  +- org.json:json:jar:20070829:compile
+[INFO] |  \- com.sun.xml.bind:jaxb-impl:jar:2.1.9:compile
+[INFO] |     \- javax.xml.bind:jaxb-api:jar:2.1:compile
+[INFO] |        +- javax.xml.stream:stax-api:jar:1.0-2:compile
+[INFO] |        \- javax.activation:activation:jar:1.1:compile
+[INFO] +- javax.persistence:persistence-api:jar:1.0:compile
+[INFO] +- org.hibernate:hibernate-core:jar:3.5.5-Final:compile
+[INFO] |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  +- javax.transaction:jta:jar:1.1:compile
+[INFO] |  \- org.slf4j:slf4j-api:jar:1.5.8:compile
+[INFO] +- org.hibernate:hibernate-annotations:jar:3.5.5-Final:compile
+[INFO] |  +- org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final:compile
+[INFO] |  \- org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.0.Final:compile
+[INFO] +- org.hibernate:hibernate-entitymanager:jar:3.5.5-Final:compile
+[INFO] |  +- cglib:cglib:jar:2.2:compile
+[INFO] |  |  \- asm:asm:jar:3.1:compile
+[INFO] |  \- javassist:javassist:jar:3.9.0.GA:compile
+[INFO] +- postgresql:postgresql:jar:8.4-701.jdbc4:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.6.1:test
+[INFO] +- log4j:log4j:jar:1.2.9:compile
+[INFO] +- easymock:easymock:jar:1.1:test
+[INFO] +- junit:junit:jar:4.7:test
+[INFO] \- org.springframework:spring-test:jar:3.0.3.RELEASE:test
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Fat Belly Jones - Web 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.1:tree (default-cli) @ fatbellyjones-web ---
+[INFO] com.viviquity:fatbellyjones-web:war:1.0.0-SNAPSHOT
+[INFO] +- net.sf.ehcache:ehcache:jar:1.6.2:compile
+[INFO] +- org.mortbay.jetty:jetty:jar:6.1.21:provided
+[INFO] |  +- org.mortbay.jetty:jetty-util:jar:6.1.21:provided
+[INFO] |  \- org.mortbay.jetty:servlet-api:jar:2.5-20081211:provided
+[INFO] +- javax.servlet:servlet-api:jar:2.4:provided (scope not updated to compile)
+[INFO] +- org.freemarker:freemarker:jar:2.3.14:compile
+[INFO] +- commons-fileupload:commons-fileupload:jar:1.2.1:compile
+[INFO] +- org.springframework:spring-context:jar:3.0.3.RELEASE:compile
+[INFO] |  +- org.springframework:spring-aop:jar:3.0.3.RELEASE:compile
+[INFO] |  +- org.springframework:spring-beans:jar:3.0.3.RELEASE:compile
+[INFO] |  +- org.springframework:spring-expression:jar:3.0.3.RELEASE:compile
+[INFO] |  \- org.springframework:spring-asm:jar:3.0.3.RELEASE:compile
+[INFO] +- org.springframework:spring-core:jar:3.0.3.RELEASE:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.1.1:compile
+[INFO] +- org.springframework:spring-context-support:jar:3.0.3.RELEASE:compile
+[INFO] +- org.springframework:spring-web:jar:3.0.3.RELEASE:compile
+[INFO] |  \- aopalliance:aopalliance:jar:1.0:compile
+[INFO] +- org.springframework:spring-webmvc:jar:3.0.3.RELEASE:compile
+[INFO] +- org.springframework.security:spring-security-core:jar:3.0.3.RELEASE:compile
+[INFO] |  +- org.springframework:spring-tx:jar:3.0.3.RELEASE:compile
+[INFO] |  +- org.aspectj:aspectjrt:jar:1.6.8:compile
+[INFO] |  \- org.aspectj:aspectjweaver:jar:1.6.8:compile
+[INFO] +- org.springframework.security:spring-security-config:jar:3.0.3.RELEASE:compile
+[INFO] +- org.springframework.security:spring-security-openid:jar:3.0.3.RELEASE:compile
+[INFO] |  \- org.openid4java:openid4java:jar:0.9.5:compile
+[INFO] |     +- org.openid4java:openid4java-consumer:jar:0.9.5:compile
+[INFO] |     |  +- org.openid4java:openid4java-nodeps:jar:0.9.5:compile
+[INFO] |     |  \- net.sourceforge.nekohtml:nekohtml:jar:1.9.7:compile
+[INFO] |     |     \- xerces:xercesImpl:jar:2.8.1:compile
+[INFO] |     +- org.openid4java:openid4java-server:jar:0.9.5:compile
+[INFO] |     +- org.openid4java:openid4java-server-JdbcServerAssociationStore:jar:0.9.5:compile
+[INFO] |     +- org.openid4java:openid4java-consumer-SampleConsumer:jar:0.9.5:compile
+[INFO] |     \- org.openid4java:openid4java-server-SampleServer:jar:0.9.5:compile
+[INFO] +- org.springframework.security:spring-security-web:jar:3.0.3.RELEASE:compile
+[INFO] +- org.springframework.security:org.springframework.security.taglibs:jar:3.0.3.RELEASE:compile
+[INFO] |  +- org.apache.commons:com.springsource.org.apache.commons.logging:jar:1.1.1:compile
+[INFO] |  +- org.springframework:org.springframework.beans:jar:3.0.3.RELEASE:compile
+[INFO] |  |  +- org.springframework:org.springframework.core:jar:3.0.3.RELEASE:compile
+[INFO] |  |  \- org.springframework:org.springframework.asm:jar:3.0.3.RELEASE:compile
+[INFO] |  +- org.springframework:org.springframework.context:jar:3.0.3.RELEASE:compile
+[INFO] |  |  +- org.springframework:org.springframework.aop:jar:3.0.3.RELEASE:compile
+[INFO] |  |  \- org.springframework:org.springframework.expression:jar:3.0.3.RELEASE:compile
+[INFO] |  +- org.springframework.security:org.springframework.security.core:jar:3.0.3.RELEASE:compile
+[INFO] |  |  \- org.aopalliance:com.springsource.org.aopalliance:jar:1.0.0:compile
+[INFO] |  +- org.springframework.security:org.springframework.security.web:jar:3.0.3.RELEASE:compile
+[INFO] |  \- org.springframework:org.springframework.web:jar:3.0.3.RELEASE:compile
+[INFO] +- org.springframework.security:org.springframework.security.acls:jar:3.0.3.RELEASE:compile
+[INFO] +- org.codehaus.jackson:jackson-mapper-asl:jar:1.3.0:compile
+[INFO] |  \- org.codehaus.jackson:jackson-core-asl:jar:1.3.0:compile
+[INFO] +- com.viviquity:fatbellyjones-core:jar:1.0.0-SNAPSHOT:compile
+[INFO] |  +- jdom:jdom:jar:1.0:compile
+[INFO] |  +- rome:rome:jar:0.9:compile
+[INFO] |  +- commons-httpclient:commons-httpclient:jar:20020423:compile
+[INFO] |  +- org.springframework:spring-orm:jar:3.0.3.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:3.0.3.RELEASE:compile
+[INFO] |  +- com.google.code.facebookapi:facebook-java-api:jar:2.0.5:compile
+[INFO] |  |  +- com.google.code.facebookapi:facebook-java-api-schema:jar:2.0.5:compile
+[INFO] |  |  |  \- org.jvnet.jaxb2_commons:runtime:jar:0.4.1.3:compile
+[INFO] |  |  |     \- commons-lang:commons-lang:jar:2.2:compile
+[INFO] |  |  +- org.json:json:jar:20070829:compile
+[INFO] |  |  \- com.sun.xml.bind:jaxb-impl:jar:2.1.9:compile
+[INFO] |  |     \- javax.xml.bind:jaxb-api:jar:2.1:compile
+[INFO] |  |        +- javax.xml.stream:stax-api:jar:1.0-2:compile
+[INFO] |  |        \- javax.activation:activation:jar:1.1:compile
+[INFO] |  +- javax.persistence:persistence-api:jar:1.0:compile
+[INFO] |  +- org.hibernate:hibernate-core:jar:3.5.5-Final:compile
+[INFO] |  |  +- antlr:antlr:jar:2.7.6:compile
+[INFO] |  |  +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] |  |  +- dom4j:dom4j:jar:1.6.1:compile
+[INFO] |  |  |  \- xml-apis:xml-apis:jar:1.0.b2:compile
+[INFO] |  |  +- javax.transaction:jta:jar:1.1:compile
+[INFO] |  |  \- org.slf4j:slf4j-api:jar:1.5.8:compile
+[INFO] |  +- org.hibernate:hibernate-annotations:jar:3.5.5-Final:compile
+[INFO] |  |  +- org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final:compile
+[INFO] |  |  \- org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.0.Final:compile
+[INFO] |  +- org.hibernate:hibernate-entitymanager:jar:3.5.5-Final:compile
+[INFO] |  |  +- cglib:cglib:jar:2.2:compile
+[INFO] |  |  |  \- asm:asm:jar:3.1:compile
+[INFO] |  |  \- javassist:javassist:jar:3.9.0.GA:compile
+[INFO] |  \- postgresql:postgresql:jar:8.4-701.jdbc4:compile
+[INFO] +- log4j:log4j:jar:1.2.9:compile
+[INFO] +- easymock:easymock:jar:1.1:test
+[INFO] +- junit:junit:jar:4.7:test
+[INFO] \- org.springframework:spring-test:jar:3.0.3.RELEASE:test
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Fat Belly Jones ................................... SUCCESS [1.566s]
+[INFO] Fat Belly Jones - Core ............................ SUCCESS [0.619s]
+[INFO] Fat Belly Jones - Web ............................. SUCCESS [0.734s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.555s
+[INFO] Finished at: Tue Aug 31 23:10:16 BST 2010
+[INFO] Final Memory: 9M/81M
+[INFO] ------------------------------------------------------------------------

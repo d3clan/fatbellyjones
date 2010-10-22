@@ -1,0 +1,199 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size: 10px;
+}
+
+#main-header {
+   background-color:#000;
+}
+
+#admin-header {
+	width:900px;
+	margin:0 auto;
+}
+
+.offset-text {
+	position: absolute;
+	left: -6000px;
+}
+
+#content {
+    width:946px;
+    margin:0 auto;
+    /*border:solid 1px red;*/
+}
+
+#content #add-event-wrapper {
+   width:600px;
+   margin:0 auto;
+}
+#gig-description {
+	height:55px;
+}
+
+fieldset#gig-fields {
+	display:none;
+	margin-top:25px;
+}
+
+fieldset.generic-fields {
+   margin-top:25px;
+}
+
+fieldset.generic-fields legend {
+	font-size: 1.1em;
+}
+.header-font {
+	font-size:1.5em;
+}
+
+.form-div {
+	padding:5px 0 5px 10px;
+	background-color:#D8DFEA;
+	border:solid 1px #D8D5D5;
+	margin-top:4px;
+	position:relative;
+	height:35px;
+}
+
+.gig-div {
+  padding:5px 0 5px 10px;
+	background-color:#D8DFEA;
+	border:solid 1px #D8D5D5;
+	margin-top:4px;
+	border:1px solid #CCC;
+}
+
+.gig-tip {
+  font-style: italic;
+  font-size:1em;
+  margin-top:4px;
+}
+
+.gig-input {
+	width:100%;
+	text-align: right;
+}
+
+.gig-para td {
+	text-align: left;
+}
+
+.gig-para {
+	width:350px
+}
+
+.gig-div .gig-value {
+    font-weight:bold;
+    font-size:1.1em;
+    
+}
+
+.form-div .error {
+	position:absolute;
+	left:120px;
+	bottom:0px;
+	color:#DB0720;
+}
+
+.fatbelly-button {
+	top:23px;
+	right:16px;
+	font-size:1.2em;
+	display:block;
+	background-color:#131765;
+	color:#FFF;
+}
+
+.submit-area {
+   position:relative;
+   text-align:right;
+   margin-top:6px;
+}
+
+fieldset .form-div label {
+	position:absolute;
+	top:7px;
+	left:35px;
+	font-size:1.2em;
+}
+
+fieldset .form-div textarea {
+	position:absolute;
+	top:4px;
+	left:120px;
+}
+
+fieldset .form-div input {
+	position:absolute;
+	top:4px;
+	left:120px;
+}
+
+fieldset .form-div .first-select {
+	position:absolute;
+	top:5px;
+	left:183px;
+}
+
+div#calendar {
+	width:810px;
+	margin:0 auto;
+}
+
+div#logo {
+	position: relative;
+	display: block;
+	height: 40px;
+	background-color: #000;
+	background-image: url(../images/admin-logo.png);
+	background-repeat: no-repeat;
+}
+
+div#navigation {
+	margin:5px 0 0 5px;
+}
+
+ div.gig a {
+    font-size:1.2em;
+    font-weight:bold;
+    background-color:red;
+    border-color:red;
+    border-style:solid;
+    color:white;
+}
+
+ div.blue a {
+    font-size:1.2em;
+    font-weight:bold;
+    background-color:blue;
+    border-color:blue;
+    border-style:solid;
+    color:white;
+}
+
+
+ul#nav-list {
+	list-style: none;
+	background-color: #FFF;
+	margin: 0;
+	padding: 0;
+}
+
+ul#nav-list li {
+	margin-left: 0;
+	display: inline;
+	text-align:center;
+}
+
+ul#nav-list li a {
+	color:#333;
+	text-decoration: none;
+	display:block inline;
+	border:solid 1px #333;
+	padding:3px 12px;
+	width:40px;
+	height:20px;
+}
