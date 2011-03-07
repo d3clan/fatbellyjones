@@ -1,0 +1,270 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	font-size: 10px;
+	background-color: #000;
+	background-image: url("../images/public-wallpaper.gif"); color : #333;
+	letter-spacing: -0.5pt;
+	color: #333;
+}
+
+body a {
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+	border: none;
+}
+
+body a img {
+	border: none;
+}
+
+body .offset-text {
+	position: absolute;
+	left: -100000px;
+}
+
+body #public-wrapper {
+	width: 1024px;
+	
+	margin: 0 auto;
+	background-image: url("../images/public-bg.gif");
+	background-repeat: no-repeat;
+	background-color: #FFF;
+}
+
+body #public-wrapper #main-header {
+	height: 165px;
+}
+
+body #public-wrapper #main-header #public-header {
+	position: relative;
+}
+
+body #public-wrapper #main-header #public-header #public-logo {
+	background-image: url("../images/public-logo.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0px;
+	left: 83px;
+	height: 173px;
+	width: 238px;
+	z-index: 1;
+}
+
+body #public-wrapper #main-header #public-header #navigation {
+	position: absolute;
+	top: 120px;
+	width: 100%;
+	height: 22px;
+	background-color: #333;
+}
+
+body #public-wrapper #main-header #public-header #navigation ul.nav-list
+	{
+	margin: -2px 0 0 310px;
+	padding: 0;
+}
+
+body #public-wrapper #main-header #public-header #navigation ul.nav-list a
+	{
+	color: #FFF;
+	font: bold 18px Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: -1.5pt;
+}
+
+body #public-wrapper #main-header #public-header #navigation ul.nav-list a:hover
+	{
+	color: #F1EFEF;
+}
+
+body #public-wrapper #main-header #public-header #navigation ul.nav-list li
+	{
+	display: inline-block;
+	font-size: 1.5em;
+	margin-left: 15px;
+}
+
+body #public-wrapper #main-header #public-header #public-logo a#logo-link
+	{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+body #public-wrapper #content {
+	margin: 0 auto;
+	width: 800px;
+}
+
+body #public-wrapper #content #top-title {
+	width: 800px;
+	height: 133px;
+	background-image: url("../images/public-home-top.gif");
+	background-repeat: no-repeat;
+}
+
+body #public-wrapper #content #body-text {
+	background-color: #FFF;
+	width: 100%;
+}
+
+body #public-wrapper #content #body-text .padded-div {
+	overflow: auto;
+	margin-top: 15px;
+	padding: 0px;
+}
+
+body #public-wrapper #content #body-text .padded-div .padded-div-left {
+	float: left;
+	width: 510px;
+	margin-right: 10px;
+	padding:10px;
+}
+
+body #public-wrapper #content #body-text .padded-div .padded-div-right {
+	float: left;
+	width: 230px;
+}
+
+body #public-wrapper #content #body-text .padded-div .padded-div-right ul {
+	padding-left:0;
+	list-style:none;
+}
+
+body #public-wrapper #content #body-text .padded-div .padded-div-right ul li a {
+	color:#800000;
+}
+
+body #public-wrapper #content #body-text .padded-div .padded-div-right ul li a:hover {
+	color:#820000;
+	text-decoration: underline;
+}
+
+#twitter h2 {
+	background-image: url("../images/twitter-top.png");
+	background-repeat: no-repeat;
+	display: block;
+	padding: 0;
+	margin: 0;
+	height: 52px;
+	width: 214px;
+	font-size: 0pt;
+}
+
+#twitter p.profileLink {
+	background-image: url("../images/twitter-follow.png");
+	background-repeat: no-repeat;
+	display: block;
+	height: 20px;
+	width: 194px;
+}
+
+#twitter p.profileLink a {
+	font-size: 0pt;
+	display: block;
+	height: 20px;
+	width: 194px;
+}
+
+.align-right {
+	text-align: right;
+	float: right;
+}
+
+#add-this {
+  clear:both;
+  float:none;
+}
+
+#slider {
+	position: relative;
+	width: 520px; /* Change this to your images width */
+	height: 246px; /* Change this to your images height */
+	background: url(../images/loading.gif) no-repeat 50% 50%;
+}
+
+#slider img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+#slider a {
+	border: 0;
+	display: block;
+}
+
+#bottom-text h1 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#what-can-we-do {
+	display: block;
+	height:176px;
+	width:202px; 
+	background-image : url("../images/what-can-we-do.png");
+	background-repeat: no-repeat;
+	padding-top:20px;
+	padding-left:20px;
+	font-size:14pt;	
+}
+
+#what-can-we-do ul li {
+	color:#FFF;
+}
+
+#public-footer {
+   margin-top:20px;
+   width:800px;
+   height:70px;
+   margin:0 auto;
+}
+
+#public-footer .border-top-bottom {
+  border-top: 1px dashed #333;
+  border-bottom: 1px dashed #333;
+}
+
+#public-footer ul.nav-list {
+	margin-left:0;
+	padding-left:0;
+}
+
+#public-footer ul.nav-list li {
+   display: inline-block;
+   margin-left:10px;
+}
+
+#public-footer #copyright {
+   text-align: center;
+   height:20px;
+   margin-bottom:20px;
+}
+
+body #public-wrapper #content #body-text .padded-div .padded-div-left #meet-the-band {
+  color:#FFF;
+  display:block;
+  padding:10px;
+  background-image: url(../images/about-us-centre-bg.gif);
+  background-repeat:no-repeat;
+  width:502px;
+  height:159px;
+}
+
+body #public-wrapper #content #body-text .padded-div .padded-div-left #meet-the-band a {
+	color:#F2B532;
+	font-size:1.1em;
+}
+
+body #public-wrapper #content #body-text .padded-div .padded-div-left #meet-the-band a:hover {
+    text-decoration:underline;
+}
+
+body #public-wrapper #content #body-text .padded-div .padded-div-left #meet-the-band h2 {
+	padding:0;
+	margin:0;
+}

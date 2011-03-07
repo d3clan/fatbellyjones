@@ -87,6 +87,6 @@ public class EmailerImpl implements Emailer {
     }
 
     private URL getLogoURL(String logo) {
-	return EmailerImpl.class.getResource(logo);
+	return ClassLoader.getSystemResource(logo);
     }
 }

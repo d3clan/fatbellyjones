@@ -47,7 +47,7 @@ public class EventBean {
     public EventBean(Event event) {
 	Calendar cal = Calendar.getInstance();
 	this.id = event.getId();
-	this.title = getTitle(event);
+	this.title = event.getTitle();
 	this.allDay = event.isAllDay();
 	this.start = event.getStart().getTime() / 1000L;
 	cal.setTime(event.getStart());
@@ -525,14 +525,6 @@ public class EventBean {
 	    return "gig";
 	} else {
 	    return event.getUser() != null ? event.getUser().getClassName() : null;
-	}
-    }
-
-    private String getTitle(Event event) {
-	if (event.getIsGig()) {
-	    return event.getTitle();
-	} else {
-	    return (event.getUser() != null ? event.getUser().getFirstName() + " - " : "") + event.getTitle();
 	}
     }
 

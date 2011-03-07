@@ -4,3 +4,5 @@ target/*
 .svn
 .settings
 .springBeans
+fatbellyjones-core/target/*
+fatbellyjones-web/target/*

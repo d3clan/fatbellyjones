@@ -23,10 +23,11 @@ import javax.imageio.ImageIO;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.Rectangle;
-import com.lowagie.text.pdf.PdfWriter;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.pdf.PdfWriter;
 
 public class PosterImage {
 
@@ -138,8 +139,8 @@ public class PosterImage {
 	}
     }
 
-    private File createPdf(File image, String venue, Date date) throws DocumentException, MalformedURLException,
-	    IOException {
+    private File createPdf(File image, String venue, Date date) throws MalformedURLException, IOException,
+	    DocumentException {
 	String filename = getFilename(venue, date);
 	File file = File.createTempFile(filename, ".pdf");
 
@@ -148,7 +149,7 @@ public class PosterImage {
 	document.setMargins(0, 0, 0, 0);
 	addMetadata(document, venue, date);
 	document.open();
-	com.lowagie.text.Image poster = com.lowagie.text.Image.getInstance(image.getAbsolutePath());
+	Image poster = Image.getInstance(image.getAbsolutePath());
 
 	Rectangle area = document.getPageSize();
 	poster.scaleToFit(area.getWidth(), area.getHeight());
@@ -168,7 +169,7 @@ public class PosterImage {
     }
 
     private String getFormattedDate(Calendar cal) {
-	String day = daysOfWeek[cal.get(Calendar.DAY_OF_WEEK)];
+	String day = daysOfWeek[cal.get(Calendar.DAY_OF_WEEK) - 1];
 	int date = cal.get(Calendar.DAY_OF_MONTH);
 	String suffix = getSuffix(date);
 	String month = months[cal.get(Calendar.MONTH)];

@@ -14,30 +14,50 @@ import com.viviquity.db.dao.JpaDao;
 import com.viviquity.db.manager.EventManager;
 
 @Service("eventManager")
-public class EventManagerImpl extends JpaManagerImpl<Long, Event> implements EventManager {
+public class EventManagerImpl extends JpaManagerImpl<Long, Event> implements
+		EventManager {
 
-    @Autowired
-    public EventManagerImpl(JpaDao<Long, Event> eventDao) {
-	super(eventDao);
-    }
-
-    public List<Event> findByDate(String start, String end) {
-	try {
-	    Long st = StringUtils.isNotBlank(start) ? Long.decode(start) : null;
-	    Long en = StringUtils.isNotBlank(end) ? Long.decode(end) : null;
-
-	    Calendar startCal = Calendar.getInstance();
-	    startCal.add(Calendar.YEAR, -2000);
-
-	    Calendar endCal = Calendar.getInstance();
-	    endCal.add(Calendar.YEAR, 2000);
-
-	    Date startDate = start != null ? new Date(st * 1000) : startCal.getTime();
-	    Date endDate = start != null ? new Date(en * 1000) : endCal.getTime();
-
-	    return ((EventDao) dao).findByDate(startDate, endDate);
-	} catch (NumberFormatException e) {
-	    return null;
+	@Autowired
+	public EventManagerImpl(JpaDao<Long, Event> eventDao) {
+		super(eventDao);
 	}
-    }
+
+	@Override
+	public List<Event> findByDate(String start, String end) {
+		try {
+			Long st = StringUtils.isNotBlank(start) ? Long.decode(start) : null;
+			Long en = StringUtils.isNotBlank(end) ? Long.decode(end) : null;
+
+			Calendar startCal = Calendar.getInstance();
+			startCal.add(Calendar.YEAR, -2000);
+
+			Calendar endCal = Calendar.getInstance();
+			endCal.add(Calendar.YEAR, 2000);
+
+			Date startDate = start != null ? new Date(st * 1000) : startCal
+					.getTime();
+			Date endDate = start != null ? new Date(en * 1000) : endCal
+					.getTime();
+
+			return ((EventDao) dao).findByDate(startDate, endDate);
+		} catch (NumberFormatException e) {
+			return null;
+		}
+	}
+	
+	@Override
+	public List<Event> findGigsByDate(Date start, Date end) {
+		return ((EventDao) dao).findGigsByDate(start, end);
+	}
+
+	@Override
+	public List<Event> findConfirmedGigs() {
+		return ((EventDao) dao).findConfirmedGigs();
+	}
+
+	@Override
+	public List<Event> findNext(int count) {
+		return ((EventDao) dao).findNext(count);
+	}
+
 }

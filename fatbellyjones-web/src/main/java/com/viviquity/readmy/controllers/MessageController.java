@@ -16,7 +16,7 @@ public class MessageController {
 
     private Logger logger = Logger.getLogger(MessageController.class);
 
-    @RequestMapping("/admin/protected/news")
+    @RequestMapping("/admin/protected/messages")
     public ModelAndView homeHandler(HttpServletRequest request, HttpServletResponse response) throws Exception {
 	Map<String, Object> model = new HashMap<String, Object>();
 	model.put("title", "Hello World!!");

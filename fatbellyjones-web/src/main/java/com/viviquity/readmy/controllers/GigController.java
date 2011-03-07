@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -39,30 +40,35 @@ public class GigController extends BaseController {
     @Autowired
     private Emailer emailer;
 
-    @RequestMapping( { "/admin/protected/gig/confirm", "/admin/protected/gig" })
-    public ModelAndView gigConfirm(@RequestParam(value = "id") Long id) throws Exception {
+    @RequestMapping( { "/admin/protected/gig/confirm/{id}", "/admin/protected/gig/{id}" })
+    public ModelAndView gigConfirm(@PathVariable(value = "id") Long id) throws Exception {
 	logger.info("Hitting gig controller");
 	User currentUser = getCurrentUser();
 	Event event = eventManager.findById(id);
-
-	List<PlaylistEntry> playlist = event.getPlaylist();
-
-	if (playlist == null || playlist.size() == 0) {
-	    playlist = new ArrayList<PlaylistEntry>();
-	    event.setPlaylist(playlist);
-	    eventManager.merge(event);
-	}
-
 	Map<String, Object> model = new HashMap<String, Object>();
-	List<User> allUsers = userManager.findAll();
-	List<ConfirmedUser> confirmed = event.getConfirmedUsers();
-	model.put("title", "Confirm gig for " + event.getTitle());
-	model.put("allUsers", allUsers);
-	model.put("currentUser", currentUser);
-	model.put("event", event);
-	model.put("perPerson", getPerPerson(event.getCharge(), allUsers));
-	model.put("functions", this);
-	model.put("confirmedUsers", getConfirmedUsers(confirmed, currentUser, event));
+
+	if (event != null) {
+
+	    List<PlaylistEntry> playlist = event.getPlaylist();
+
+	    if (playlist == null || playlist.size() == 0) {
+		playlist = new ArrayList<PlaylistEntry>();
+		event.setPlaylist(playlist);
+		eventManager.merge(event);
+	    }
+
+	    List<User> allUsers = userManager.findAll();
+	    List<ConfirmedUser> confirmed = event.getConfirmedUsers();
+	    model.put("title", "Confirm gig for " + event.getTitle());
+	    model.put("allUsers", allUsers);
+	    model.put("currentUser", currentUser);
+	    model.put("event", event);
+	    model.put("perPerson", getPerPerson(event.getCharge(), allUsers));
+	    model.put("functions", this);
+	    model.put("confirmedUsers", getConfirmedUsers(confirmed, currentUser, event));
+	} else {
+	    model.put("title", "Cannot find event");
+	}
 	return new ModelAndView("gig", model);
     }
 

@@ -1,22 +1,15 @@
 package com.viviquity.fatbellyjones.facebook;
 
-import static org.junit.Assert.assertNotNull;
-
-import java.awt.Font;
 import java.awt.FontFormatException;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Calendar;
-
-import javax.imageio.ImageIO;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.lowagie.text.DocumentException;
+import com.itextpdf.text.DocumentException;
 import com.viviquity.core.facebook.FacebookImage;
 import com.viviquity.core.image.PosterImage;
 

@@ -8,6 +8,7 @@ http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
 	<persistence-unit name="fatbellyjones" transaction-type="RESOURCE_LOCAL">
 	
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.viviquity.core.model.News</class>
 		<class>com.viviquity.core.model.Event</class>
 		<class>com.viviquity.core.model.User</class>
 		<class>com.viviquity.core.model.Role</class>

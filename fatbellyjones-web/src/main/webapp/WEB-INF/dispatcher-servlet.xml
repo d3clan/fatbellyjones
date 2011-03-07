@@ -34,6 +34,7 @@
 	</bean>
 	
 	<bean class="com.viviquity.readmy.validation.CheckEventValidator" />
+	<bean class="com.viviquity.readmy.validation.TuneBeanValidator" />
 
 	<bean
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
@@ -41,6 +42,8 @@
 			<map>
 				<entry key="html" value="text/html" />
 				<entry key="json" value="application/json" />
+				<entry key="pdf" value="application/pdf" />
+				<entry key="atom" value="application/atom+xml"/>
 			</map>
 		</property>
 		<property name="viewResolvers">

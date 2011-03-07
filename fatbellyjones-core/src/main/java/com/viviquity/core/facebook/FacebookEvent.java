@@ -10,7 +10,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.google.code.facebookapi.FacebookJaxbRestClient;
-import com.google.code.facebookapi.FacebookJsonRestClient;
 import com.viviquity.core.model.Event;
 import com.viviquity.core.storage.FatbelliesIOException;
 

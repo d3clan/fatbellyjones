@@ -19,4 +19,5 @@ public class UserManagerImpl extends JpaManagerImpl<Long, User> implements UserM
     public User findByUsername(String username) {
 	return ((UserDao) dao).findByUsername(username);
     }
+
 }

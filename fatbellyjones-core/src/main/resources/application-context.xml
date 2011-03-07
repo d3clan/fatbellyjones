@@ -13,17 +13,27 @@
 
 	<bean id="twitterTweet" class="com.viviquity.core.twitter.TwitterTweet">
 		<constructor-arg index="0" ref="accessToken" />
-		<constructor-arg index="1" value="${com.viviquity.fatbellyjones.twitter.oath.key}"/>
-		<constructor-arg index="2" value="${com.viviquity.fatbellyjones.twitter.oath.secret}"/>
+		<constructor-arg index="1"
+			value="${com.viviquity.fatbellyjones.twitter.oath.key}" />
+		<constructor-arg index="2"
+			value="${com.viviquity.fatbellyjones.twitter.oath.secret}" />
 		<constructor-arg index="3" ref="httpClient" />
-		<constructor-arg index="4" value="${com.viviquity.fatbellyjones.tinyUrl.url}"/>
+		<constructor-arg index="4"
+			value="${com.viviquity.fatbellyjones.tinyUrl.url}" />
 	</bean>
-	
-	<bean id="httpClient" class="org.apache.commons.httpclient.HttpClient"/>
-	
+
+	<bean id="httpClient" class="org.apache.commons.httpclient.HttpClient" />
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="1000000" />
+	</bean>
+
 	<bean id="accessToken" class="twitter4j.http.AccessToken">
-	    <constructor-arg index="0" value="${com.viviquity.fatbellyjones.twitter.oath.access.token}"/>
-	    <constructor-arg index="1" value="${com.viviquity.fatbellyjones.twitter.oath.access.secret}"/>
+		<constructor-arg index="0"
+			value="${com.viviquity.fatbellyjones.twitter.oath.access.token}" />
+		<constructor-arg index="1"
+			value="${com.viviquity.fatbellyjones.twitter.oath.access.secret}" />
 	</bean>
 
 	<bean id="facebookEvent" class="com.viviquity.core.facebook.FacebookEvent">
@@ -87,6 +97,14 @@
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
 
+	<bean id="playlistDao" class="com.viviquity.db.dao.impl.PlaylistDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<bean id="tuneDao" class="com.viviquity.db.dao.impl.TuneDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
 	<bean id="userDao" class="com.viviquity.db.dao.impl.UserDaoImpl">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
@@ -94,9 +112,21 @@
 	<bean id="roleDao" class="com.viviquity.db.dao.impl.RoleDaoImpl">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
+	
+	<bean id="newsDao" class="com.viviquity.db.dao.impl.NewsDaoImpl">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
 
 	<bean id="eventManager" class="com.viviquity.db.manager.impl.EventManagerImpl">
 		<constructor-arg ref="eventDao" />
+	</bean>
+
+	<bean id="playlistManager" class="com.viviquity.db.manager.impl.PlaylistManagerImpl">
+		<constructor-arg ref="playlistDao" />
+	</bean>
+
+	<bean id="tuneManager" class="com.viviquity.db.manager.impl.TuneManagerImpl">
+		<constructor-arg ref="tuneDao" />
 	</bean>
 
 	<bean id="userManager" class="com.viviquity.db.manager.impl.UserManagerImpl">
@@ -105,6 +135,10 @@
 
 	<bean id="roleManager" class="com.viviquity.db.manager.impl.RoleManagerImpl">
 		<constructor-arg ref="roleDao" />
+	</bean>
+	
+	<bean id="newsManager" class="com.viviquity.db.manager.impl.NewsManagerImpl">
+		<constructor-arg ref="newsDao" />
 	</bean>
 
 	<bean id="entityManagerFactory"
@@ -121,8 +155,7 @@
 		</property>
 	</bean>
 
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		lazy-init="true">
 		<property name="driverClassName" value="org.postgresql.Driver" />
 		<property name="url" value="${com.viviquity.fatbellyjones.db.url}" />

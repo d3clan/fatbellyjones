@@ -13,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 /**
@@ -459,6 +460,7 @@ public class Event extends BaseEntity<Long> {
      * @return the playlist
      */
     @OneToMany(cascade = { CascadeType.ALL })
+    @OrderBy(value = "order, set asc")
     public List<PlaylistEntry> getPlaylist() {
 	return playlist;
     }

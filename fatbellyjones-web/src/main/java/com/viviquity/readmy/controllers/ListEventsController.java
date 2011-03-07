@@ -82,6 +82,11 @@ public class ListEventsController extends BaseController {
 	model.put("title", "Edit event");
 	logger.info("Hitting add event controller");
 	Event event = eventManager.findById(id);
+
+	if (event != null && event.getIsGig() && event.isConfirmed()) {
+	    return new ModelAndView("redirect:/admin/protected/gig/" + event.getId() + ".html");
+	}
+
 	EventBean eventBean = new EventBean(event);
 	model.put("hours", getHours());
 	model.put("mins", getMins());
@@ -166,7 +171,7 @@ public class ListEventsController extends BaseController {
 	    if (!result.hasErrors()) {
 
 		saveCalendarEvent(eventBean);
-		return "redirect:/admin/protected/gig/confirm.html?id=" + eventBean.getId();
+		return "redirect:/admin/protected/gig/confirm/" + eventBean.getId() + ".html";
 	    } else {
 		request.getSession(true).setAttribute(EVENT_BEAN_ATTRIBUTE, eventBean);
 		return "redirect:/admin/protected/events/new.html";

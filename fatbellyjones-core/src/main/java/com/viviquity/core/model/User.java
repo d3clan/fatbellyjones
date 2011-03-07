@@ -27,12 +27,13 @@ public class User extends BaseEntity<Long> {
     private String country;
     private String city;
     private String password;
+    private String pullQuote;
     private String statement;
+    private String instrument;
     private String photo;
     private Role role;
     private List<Event> events;
     private List<Tune> tunes;
-    private List<PlaylistEntry> playlistEntries;
     private String className;
 
     /**
@@ -71,13 +72,45 @@ public class User extends BaseEntity<Long> {
 	this.password = password;
     }
 
-    @Column(name = "statement")
+    @Column(name = "statement", length = 2000)
     public String getStatement() {
 	return statement;
     }
 
     public void setStatement(String statement) {
 	this.statement = statement;
+    }
+
+    /**
+     * @return the pullQuote
+     */
+    @Column(name = "pull_quote", length = 220)
+    public String getPullQuote() {
+	return pullQuote;
+    }
+
+    /**
+     * @param pullQuote
+     *            the pullQuote to set
+     */
+    public void setPullQuote(String pullQuote) {
+	this.pullQuote = pullQuote;
+    }
+
+    /**
+     * @return the instrument
+     */
+    @Column(name = "instrument")
+    public String getInstrument() {
+	return instrument;
+    }
+
+    /**
+     * @param instrument
+     *            the instrument to set
+     */
+    public void setInstrument(String instrument) {
+	this.instrument = instrument;
     }
 
     @Column(name = "photo")
@@ -197,22 +230,6 @@ public class User extends BaseEntity<Long> {
      */
     public void setTunes(List<Tune> tunes) {
 	this.tunes = tunes;
-    }
-
-    /**
-     * @return the playlistEntries
-     */
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)
-    public List<PlaylistEntry> getPlaylistEntries() {
-	return playlistEntries;
-    }
-
-    /**
-     * @param playlistEntries
-     *            the playlistEntries to set
-     */
-    public void setPlaylistEntries(List<PlaylistEntry> playlistEntries) {
-	this.playlistEntries = playlistEntries;
     }
 
     /**

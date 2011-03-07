@@ -20,7 +20,6 @@ public class PlaylistEntry extends BaseEntity<Long> {
     private Integer order;
     private Integer set;
     private String response;
-    private User user;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -68,7 +67,7 @@ public class PlaylistEntry extends BaseEntity<Long> {
     /**
      * @return the tune
      */
-    @ManyToOne(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
+    @ManyToOne(cascade = { CascadeType.MERGE }, fetch = FetchType.LAZY)
     public Tune getTune() {
 	return tune;
     }
@@ -113,20 +112,39 @@ public class PlaylistEntry extends BaseEntity<Long> {
 	this.set = set;
     }
 
-    /**
-     * @return the user
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#hashCode()
      */
-    @ManyToOne(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY)
-    public User getUser() {
-	return user;
+    @Override
+    public int hashCode() {
+	final int prime = 31;
+	int result = 1;
+	result = prime * result + ((id == null) ? 0 : id.hashCode());
+	return result;
     }
 
-    /**
-     * @param user
-     *            the user to set
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Object#equals(java.lang.Object)
      */
-    public void setUser(User user) {
-	this.user = user;
+    @Override
+    public boolean equals(Object obj) {
+	if (this == obj)
+	    return true;
+	if (obj == null)
+	    return false;
+	if (getClass() != obj.getClass())
+	    return false;
+	PlaylistEntry other = (PlaylistEntry) obj;
+	if (id == null) {
+	    if (other.id != null)
+		return false;
+	} else if (!id.equals(other.id))
+	    return false;
+	return true;
     }
 
 }

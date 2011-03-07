@@ -201,7 +201,7 @@
 	</dependencies>
 
 	<properties>
-		<spring.version>3.0.3.RELEASE</spring.version>
+		<spring.version>3.0.4.RELEASE</spring.version>
 		<jsp.version>2.0</jsp.version>
 		<java.version>1.6</java.version>
 		<hibernate.version>3.5.5-Final</hibernate.version>
