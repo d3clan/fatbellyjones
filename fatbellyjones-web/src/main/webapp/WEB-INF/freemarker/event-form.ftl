@@ -23,12 +23,12 @@
         $('input#is-gig').click(function() {
            if ($('#is-gig:checked').val()) {
                $('#gig-fields').css('display', 'none').fadeIn(1000);
-               $('#save-event-div').css('visibility', 'normal').fadeOut(1000);
+               $('#save-event-div').css('display', 'block').fadeOut(1000);
                $('#to-field').css('display', 'block').fadeOut(1000);
                $('#from-date-label').text('Date:');
            } else {
                $('#gig-fields').css('display', 'block').fadeOut(1000);
-               $('#save-event-div').css('visibility', 'normal').fadeIn(1000);
+               $('#save-event-div').css('display', 'none').fadeIn(1000);
                $('#to-field').css('display', 'none').fadeIn(1000);
                $('#from-date-label').text('From:');
            }
@@ -88,7 +88,7 @@
                      <@spring.bind "eventBean.startHour" />
 		             <label for="startHour">Start Time (hours:mins):</label>
 		             <div class="first-select">
-		                 <select name="startHour">
+		                 <select class="hour" name="startHour">
 		                 <#list hours as h>
 		                    <option <#if h == eventBean.startHour!>selected="selected"</#if> value="${h}">${h}</option>
                          </#list>  
@@ -96,7 +96,7 @@
 		                 <select name="startMin">
 		                 <#list mins as m>
 		                    <option <#if m == eventBean.startMin!>selected="selected"</#if> value="${m}">${m}</option>
-                         </#list>  
+                         </#list>
 		                 </select>
 		             </div>
 		             <br/>
@@ -105,7 +105,7 @@
 		         <div class="form-div">
 		         <label for="endHour">End Time (hours:mins):</label>
 		         <div class="first-select">
-		             <select name="endHour">
+		             <select class="hour" name="endHour">
 		                 <#list hours as h>
 		                    <option <#if h == eventBean.endHour!>selected="selected"</#if> value="${h}">${h}</option>
                          </#list>  

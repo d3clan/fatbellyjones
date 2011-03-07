@@ -17,7 +17,7 @@
     width: 100,
     height:100,
     padding: 0,
-    background: '#FFFFFF',
+    background: '#000',
     zIndex:3,
     color: 'black',
     textAlign: 'center',
@@ -40,7 +40,7 @@
 				dayClick: function(date, allDay, jsEvent, view) {
                     $(this).qtip({ content: {
 	                        prerender: false, 
-	                        text: "<div><a href=\"${rc.contextPath}/admin/protected/events/new.html?day=" + date.getTime() + "\">Add calendar entry</a></div>"
+	                        text: "<div class=\"event-click\" style=\"background-color:#000\"><a href=\"${rc.contextPath}/admin/protected/events/new.html?day=" + date.getTime() + "\">Add calendar entry</a></div>"
 	                    },
                         position: {corner: {tooltip: 'topLeft', target: 'topLeft'}},
                         show: { when: { event: 'click' },
@@ -52,7 +52,7 @@
                 eventClick: function(calEvent, jsEvent, view) {
                     $(this).qtip({ content: {
 	                       prerender: false, 
-	                       text: "<div><a href=\"${rc.contextPath}/admin/protected/events/edit.html?id=" + calEvent.id + "\">Edit calendar entry</a></div>" 
+	                       text: "<div style=\"background-color:#000\"><a href=\"${rc.contextPath}/admin/protected/events/edit/" + calEvent.id + ".html\">Edit event entry</a></div>" 
 	                    },
                         position: {corner: {tooltip: 'bottomMiddle', target: 'topMiddle'}},
                         show: { when: { event: 'click' },

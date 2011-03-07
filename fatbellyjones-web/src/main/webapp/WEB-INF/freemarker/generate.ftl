@@ -31,7 +31,7 @@ function loadArtifacts(loadArray, index) {
                        loadArtifacts(loadArray, (1+index));
                    } else {
                        var timeoutID = window.setTimeout(function() {
-                       $(location).attr("href", "${rc.contextPath}/admin/protected/gig.html?id=${event.id}");
+                       $(location).attr("href", "${rc.contextPath}/admin/protected/gig/${event.id}.html");
                        }, 10000);
                    }
                 } else {

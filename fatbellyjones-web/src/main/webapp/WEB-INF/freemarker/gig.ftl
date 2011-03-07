@@ -74,7 +74,7 @@ The host can be contact via email at <span class="gig-value"><a href="mailto:${e
 </div>
 <#if event.confirmed>
 <div class="gig-div">
-   <p><a href="${rc.contextPath}/admin/protected/playlists/${event.id}.html">Playlist </a>.</p>
+   <p><a href="${rc.contextPath}/admin/protected/playlist/${event.id}.html">Playlist </a>.</p>
 </div>
 </#if>
 <div class="gig-div">

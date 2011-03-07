@@ -1,7 +1,7 @@
 <#import "/spring.ftl" as spring>
 <#assign xhtmlCompliant = true in spring>
 
-<#macro admin css=["/css/admin.css"] js=[] other=[]>
+<#macro public css=["/css/main.css"] js=[] other=[]>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -9,7 +9,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>${title!}</title>
    
-    <#list js as file>	
+    <#list js as file>
 	    <script type="text/javascript" src="${rc.contextPath}${file}"></script>
     </#list>
 
@@ -23,16 +23,17 @@
     
   </head>
   <body>
-    <div id="main-header">
-      <#include "/common/admin-header.ftl">
-    </div>
-    <hr/>
-    <div id="content">
-      <#nested>
-    </div>
-    <div id="footer">
-        <#include "/common/admin-footer.ftl">
-    </div>
+     <div id="public-wrapper">
+       <div id="main-header">
+         <#include "/common/public-header.ftl">
+       </div>
+       <div id="content">
+         <#nested>
+       </div>
+       <div id="footer">
+          <#include "/common/public-footer.ftl">
+       </div>
+     </div>
   </body>
 </html>
 </#macro>
