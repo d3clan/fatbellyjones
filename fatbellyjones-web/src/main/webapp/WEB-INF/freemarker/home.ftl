@@ -2,7 +2,7 @@
 
 <@layout.public 
      js=["/js/jquery/jquery.js" "/js/jquery/jquery.nivo.slider.js" "/js/jquery/jquery.twitter.js"] 
-     css=["/css/main.css"]
+     css=["/css/main.css" "css/nivo-slider.css"]
 >
 
 <div id="top-title" title="We play the toons that you just can't help jumpin' to.">
@@ -49,5 +49,11 @@
       </div>
    </div>
 </div>
+
+<script type="text/javascript">
+$(window).load(function() {
+    $('#slider').nivoSlider();
+});
+</script>
 
 </@layout.public>

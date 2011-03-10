@@ -1,8 +1,6 @@
-target/*
+target/
 .project
 .classpath
 .svn
 .settings
 .springBeans
-fatbellyjones-core/target/*
-fatbellyjones-web/target/*

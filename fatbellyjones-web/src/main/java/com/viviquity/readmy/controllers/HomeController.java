@@ -24,15 +24,14 @@ public class HomeController {
 	@Autowired
 	private EventManager eventManager;
 
-	@RequestMapping(value = { "/home", "/index" })
+	@RequestMapping(value = { "/404" })
 	public ModelAndView homeHandler(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		logger.info("Hitting home controller");
+		logger.info("Hitting error controller");
 		Map<String, Object> model = new HashMap<String, Object>();
-		model.put("title", "Welcome to the Fat Belly Jones website");
-		List<Event> nextGig = eventManager.findNext(1);
-		model.put("gigs", nextGig);
-		return new ModelAndView("home", model);
+		model.put("title", "Sorry, cannot find that page");
+		model.put("error", "Sorry, cannot find that page");
+		return new ModelAndView("404", model);
 	}
 
 }
