@@ -8,7 +8,7 @@
 <div id="body-text">
    <div class="padded-div" id="bottom-text">
       <div class="padded-div-left">
-         <h1>${user.firstName} &ndash; ${user.instrument}</h1>
+      <h1>${user.firstName} &ndash; ${user.instrument}</h1>
          <#include "/common/add-this.ftl">
          <div id="statement">${user.statement!}</div>
       </div>
