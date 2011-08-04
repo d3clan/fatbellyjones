@@ -2,10 +2,16 @@ package com.viviquity.readmy.controllers;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeSet;
+
+import javassist.NotFoundException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -71,7 +77,50 @@ public class PublicGigController {
 				}
 			}
 		}
+		
 		return events;
-	} 
+	}
+	
+	private Map<String, List<Event>> sortMap(Map<String, List<Event>> events) {
+		Map<String, List<Event>> evts = new HashMap<String, List<Event>>();
+		LinkedList<String> keys = new LinkedList<String>(events.keySet());
+		Collections.sort(keys, new Comparator<String>() {
+
+			@Override
+			public int compare(String key1, String key2) {
+				try {
+					int k1 = getIndexOfMonth(key1);
+					int k2 = getIndexOfMonth(key2);
+					if (k1 == k2) {
+						return 0;
+					} else if (k1 < k2) {
+						return -1;
+					} else {
+						return 1;
+					}
+				} catch (NotFoundException e) {
+					logger.error("Cannot dort list", e);
+				}
+				return 0;
+			}
+			
+		});
+		
+		for (String key : keys) {
+			List<Event> monthEvents = events.get(key);
+			evts.put(key, monthEvents);
+		}
+		return evts;
+	}
+	
+	private int getIndexOfMonth(String month) throws NotFoundException {
+		for (int i=0;i<MONTHS.length;i++) {
+			String arrayMonth = MONTHS[i];
+			if (arrayMonth.equals(month)) {
+				return i;
+			}
+		}
+		throw new NotFoundException("Cannot find month " + month);
+	}
 
 }

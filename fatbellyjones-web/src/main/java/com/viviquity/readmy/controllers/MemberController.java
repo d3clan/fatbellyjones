@@ -1,11 +1,7 @@
 package com.viviquity.readmy.controllers;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +21,10 @@ public class MemberController {
     @Autowired
     private UserManager userManager;
 
-    @RequestMapping(value = { "/about/member/{id}" })
-    public ModelAndView memberHandler(@PathVariable(value = "id") Long id) throws Exception {
+    @RequestMapping(value = { "/about/member/{username}" })
+    public ModelAndView memberHandler(@PathVariable(value = "username") String username) throws Exception {
 	Map<String, Object> model = new HashMap<String, Object>();
-	User user = userManager.findById(id);
+	User user = userManager.findByUsername(username);
 	model.put("title", "Fat Belly Jones &lt;&lt;" + user.getFirstName() + " &ndash;" + user.getInstrument()
 		+ "&gt;&gt;");
 	model.put("user", user);

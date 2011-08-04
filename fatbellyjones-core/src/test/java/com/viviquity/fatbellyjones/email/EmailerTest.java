@@ -1,13 +1,11 @@
 package com.viviquity.fatbellyjones.email;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
-import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Date;
 
-import org.apache.commons.mail.EmailException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

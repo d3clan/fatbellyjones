@@ -53,6 +53,15 @@
 <script type="text/javascript">
 $(window).load(function() {
     $('#slider').nivoSlider();
+    $("#twitter").getTwitter({
+        userName: "fatbellies",
+        numTweets: 5,
+        loaderText: "Loading tweets...",
+        slideIn: true,
+        showHeading: true,
+        headingText: "Latest Tweets",
+        showProfileLink: true
+    });
 });
 </script>
 

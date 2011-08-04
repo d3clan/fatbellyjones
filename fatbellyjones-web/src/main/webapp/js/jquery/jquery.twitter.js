@@ -38,7 +38,7 @@
 			}
 
 			// add twitter list to container element
-			var twitterListHTML = "<ul id=\"twitter_update_list\"><li></li></ul>";
+			var twitterListHTML = "<ul id=\"twitter_update_list\" style=\"padding:10px;\"><li></li></ul>";
 			c.append(twitterListHTML);
 
 			var tl = $("#twitter_update_list");

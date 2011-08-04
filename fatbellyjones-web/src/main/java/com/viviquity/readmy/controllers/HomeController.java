@@ -1,7 +1,6 @@
 package com.viviquity.readmy.controllers;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.viviquity.core.model.Event;
 import com.viviquity.db.manager.EventManager;
 
 @Controller

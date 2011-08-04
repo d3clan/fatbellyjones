@@ -124,12 +124,13 @@ body #public-wrapper #content #body-text .padded-div .padded-div-left {
 }
 
 body #public-wrapper #content #body-text .padded-div .padded-div-right {
-	float: left;
-	width: 230px;
+	float: right;
+	width: 260px;
 }
 
 body #public-wrapper #content #body-text .padded-div .padded-div-right ul {
-	padding-left:0;
+	padding:0;
+	margin:0;
 	list-style:none;
 }
 
@@ -149,7 +150,7 @@ body #public-wrapper #content #body-text .padded-div .padded-div-right ul li a:h
 	padding: 0;
 	margin: 0;
 	height: 52px;
-	width: 214px;
+	width: 252px;
 	font-size: 0pt;
 }
 
@@ -158,7 +159,11 @@ body #public-wrapper #content #body-text .padded-div .padded-div-right ul li a:h
 	background-repeat: no-repeat;
 	display: block;
 	height: 20px;
-	width: 194px;
+	width: 250px;
+}
+
+#twitter ul {
+	padding:5px;
 }
 
 #twitter p.profileLink a {
@@ -204,8 +209,8 @@ body #public-wrapper #content #body-text .padded-div .padded-div-right ul li a:h
 
 #what-can-we-do {
 	display: block;
-	height:176px;
-	width:202px; 
+	height:224px;
+	width:240px; 
 	background-image : url("../images/what-can-we-do.png");
 	background-repeat: no-repeat;
 	padding-top:20px;
@@ -267,4 +272,9 @@ body #public-wrapper #content #body-text .padded-div .padded-div-left #meet-the-
 body #public-wrapper #content #body-text .padded-div .padded-div-left #meet-the-band h2 {
 	padding:0;
 	margin:0;
+}
+
+
+#twitter_update_list {
+	padding:5px;
 }

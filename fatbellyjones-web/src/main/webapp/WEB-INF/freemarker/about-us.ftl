@@ -19,7 +19,7 @@
             <h2>Meet the band</h2>
             <ul>
                <#list users as user>
-                 <li><a href="${rc.contextPath}/about/member/${user.id}.html">${user.firstName} ${user.surname} - ${user.instrument}</a></li>
+                 <li><a href="${rc.contextPath}/about/member/${user.username}.html">${user.firstName} ${user.surname} - ${user.instrument}</a></li>
                </#list>
             </ul>
         </div>
