@@ -5,3 +5,7 @@ target/
 .settings
 .springBeans
 fatbellyjones.properties
+.idea/
+atlassian-ide-plugin.xml
+*.iml
+
